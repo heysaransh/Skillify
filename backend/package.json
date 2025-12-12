@@ -5,8 +5,10 @@
     "main": "src/index.js",
     "type": "module",
     "scripts": {
+        "build": "prisma generate && prisma migrate deploy",
         "start": "node src/index.js",
         "dev": "nodemon src/index.js",
+        "postinstall": "prisma generate",
         "prisma:generate": "prisma generate",
         "prisma:migrate": "prisma migrate dev",
         "prisma:push": "prisma db push"
